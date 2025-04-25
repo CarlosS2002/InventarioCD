@@ -8,11 +8,10 @@ const app=express();
 
 /*seterar un puerto a mi web server */
 app.set("port",5000)
-app.use(cors());
-/*routes */
-app.use("/api/categorias",categoriaRouter);
+/*Midleware */
 app.use(express.json());
+app.use(cors());/*routes */
+app.use("/api/categorias",categoriaRouter);
 
 /*hacemos dispobinle a mis erver app para toda la aplicación */
 export default app;
-
