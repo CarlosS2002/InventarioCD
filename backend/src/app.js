@@ -14,7 +14,8 @@ app.use("/api/categorias",categoriaRouter);
 app.use("/api/empleados",empleadoRouter);
 app.use("/api/clientes",clienteRouter);
 app.use("/api/productos",productoRouter);
-
+app.get('/',(req,res)=>{
+    res.send('REST API EN RENDER WITHOUT DATABASE ENDPOINTS')
+})
 
 export default app;
-
